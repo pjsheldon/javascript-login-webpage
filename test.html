@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Login Page</title>
+	<center>
+		<h1>Login</h1>
+	</center>	
+</head>
+<body>
+	<center>
+		<input type="text" id="firstName" placeholder="First Name"><br />
+		<input type="text" id="lastName" placeholder="Last Name"><br />
+		<input type="text" id="school" placeholder="School Name"><br />
+		<button onclick="clicker()">Log on</button>
+	</center>
+	<script>
+	function clicker() {
+	
+		var firstName = document.getElementById('firstName').value;
+		var lastName = document.getElementById('lastName').value;
+		var school = document.getElementById('school').value;
+
+		var firstLetter = firstName.substring(0, 1);
+		var secondLetter = lastName.substring(0, 1);
+		var schoolWord = school.split(' ')[0];
+
+		var newusername = firstLetter + secondLetter + schoolWord;
+	
+		window.alert("Your user name is: " + newusername);
+
+		document.getElementById('firstName').value = '';
+		document.getElementById('lastName').value = '';
+		document.getElementById('school').value = '';
+	
+	}
+	</script>
+</body>
+</html>
